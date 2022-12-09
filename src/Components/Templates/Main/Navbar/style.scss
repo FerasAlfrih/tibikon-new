@@ -1,0 +1,45 @@
+@import '../../../../Assets/scss/color-variables';
+@import '../../../../Assets/scss/display-variables';
+
+.navbar{
+  --bs-navbar-toggler-icon-bg:url('../../../../Assets/icons/list.svg');
+  @include flex(center, space-between);
+  width: 100%;
+  box-shadow: 0 1px 0 0 $platinum;
+  padding: 8px 12px !important;
+  position: absolute;
+  .nav-link:focus, .nav-link:hover{
+    color: $platinum !important;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  .navbar-toggler{
+    border: none;
+  }
+  .navbar-toggler-icon{
+    position: relative;
+
+  }
+  .navbar-collapse.collapse.show{
+    @include flex(flex-end, flex-end);
+    min-width: 100%;
+  }
+  .navbar-collapse.collapse{
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 40% !important;
+    .navbar-elements {
+      @include flex(center, space-around);
+      width:100%;
+    }
+  }
+}
+@media  (max-width: 576px){
+  .navbar-elements{
+    @include flex(flex-end, space-around);
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 0 0;
+  }
+}

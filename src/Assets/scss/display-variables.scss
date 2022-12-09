@@ -1,0 +1,5 @@
+@mixin flex($pos1, $pos2) {
+  display: flex;
+  align-items: $pos1 !important;
+  justify-content: $pos2 !important;
+}

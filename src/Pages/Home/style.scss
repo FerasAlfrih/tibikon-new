@@ -1,0 +1,9 @@
+@import '../../Assets/scss/color-variables';
+@import '../../Assets/scss/display-variables';
+
+.home-page{
+  @include flex(center, center);
+  height: 100%;
+  width: 100%;
+}
+h1{color: $diamond}
